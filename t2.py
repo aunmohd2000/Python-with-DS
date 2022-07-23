@@ -1,11 +1,22 @@
 from turtle import *
-
-forward(2000)#move forward 200 units
-left(90)    #move left 90 degrees
-forward(100)
-left(90)
-forward(2000)
-left(90)
-forward(100)
-
+forward(20)#move forward 200 units
+left(36)    #move left 90 degrees
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
+forward(20)
+left(36)
 mainloop()#stops the window from closing

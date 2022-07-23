@@ -1,0 +1,16 @@
+from turtle import *
+
+speed('slowest')
+pencolor('red')
+bgcolor('black')
+width(5)
+pensize(10)
+side= 8
+size= 150
+fillcolor('green')
+begin_fill()
+for i in range(side):
+    fd(size)
+    lt(360/side)
+end_fill()
+mainloop()
