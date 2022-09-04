@@ -1,8 +1,8 @@
 import random
 import pgzrun
 
-WIDTH = 1312
-HEIGHT = 665
+WIDTH = 500
+HEIGHT = 500
 MAX_BULLETS = 3
 
 level = 1
