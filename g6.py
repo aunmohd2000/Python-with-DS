@@ -1,21 +1,38 @@
-import random
+from turtle import speed
 import pgzrun
 
-WIDTH = 500
 HEIGHT = 500
-MAX_BULLETS = 3
+WIDTH = 500
+ 
+class Player(Actor):
+    speed = 3
 
-level = 1
-lives = 3
-score = 0
+    def move(self):
+        if keyboard.LEFT and self.left > 0:
+            self.x += -self.speed
+        if keyboard.RIGHT and self.right <WIDTH:
+            self.x += self.speed
 
-bg = Actor("shooting",center =(300,500))
-# player = Actor("player", (200, 580))
-enemies = []
-bullets = []
-bombs = []
+class Enemy(Actor):
+    speed=4
+
+    def chase(self,player):
+        if self.x < player.x:
+            self.x+=self.speed
+        if self.x>player.x:
+            self.x+=-self.speed
+
+p=Player('ironman',pos=(100,100))
+e=Enemy('thanos2',pos=(400,400))
+    
 
 def draw():
-   bg.draw()
+    screen.clear()
+    p.draw()
+    e.draw()
+
+def update():
+    p.move()
+    e.chase(p)
 
 pgzrun.go()
